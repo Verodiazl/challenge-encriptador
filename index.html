@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="esp">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="reset.css">
+</head>
+
+<body>
+    <header>
+
+        <img class="logoalura" src="imagenes/Logo.png">
+
+    </header>
+
+    <main class="caja-textoyboton">
+
+        <div class="contenido-central">
+
+            <div class="introduccion-texto" id="caja-y-botones">
+                <textarea id="texto-encriptar" class="cajatexto" placeholder="Ingrese el texto aqui" onclick="borrarPlaceholder()" required></textarea>
+            </div>
+
+            <!-- Selecciona el campo de texto de entrada y salida en el HTML -->
+            <div>
+                <p class="aviso-minusculas">Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="botones" id="caja-y-botones">
+                <input type="submit" value="Encriptar" class="boton-encrip" id="btn-Encriptar"
+                    onclick="btnEncriptar()">
+                <input type="submit" value="Desencriptar" class="boton-desencrip" onclick="btnDesencriptar()">
+            </div>
+
+            <div class="caja-costado">
+
+                <img class="imagen-muñeco" src="imagenes/Muñeco.png">
+                <h1 class="titulo-faltatexto" id="falta-texto">Ningún mensaje fue encontrado</h1>
+                <p class="aviso-faltatexto" id="aviso-faltatexto">Ingresa el texto que desees encriptar o desencriptar.</p>
+
+                <textarea id="campo-mensaje" class="resultado"></textarea>
+                <input type="submit" value="Copiar" class="boton-copiar" onclick="btnCopiar()" id="boton-copiar">
+            </div>
+
+        </div>
+
+        <script src="app.js"></script>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
